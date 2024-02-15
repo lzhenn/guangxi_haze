@@ -1,0 +1,29 @@
+[INPUT_OPT]
+oculus_root = /public/home/jchen/project/haze/model/test/guangxi_haze
+feature_lib_file = Y_59031.csv
+label_file = X_59031.csv
+model_strt_time = 20010101
+model_end_time = 20191231
+infer_file = X_59031.csv
+infer_labels = haze
+infer_strt_time = 20201219
+infer_end_time = 20201228
+
+[CORE]
+model_name = random_forestC
+cv = 10
+ntasks = 50
+gs_score = f1
+rf_max_trees=100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 1800, 2000
+rf_max_depth=8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
+iteration_times = 10000
+label_standardize = False
+test_size = 0.25
+archive_model = True
+svm_c = 1.0
+svm_epsilon = 0.2
+cnn_n_hidden = 10
+cnn_batch_size = 64
+cnn_epoch = 100
+cnn_lr = 0.001
+
